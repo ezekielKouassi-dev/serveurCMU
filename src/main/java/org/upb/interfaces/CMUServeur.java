@@ -7,18 +7,20 @@ import org.upb.model.Patient;
 
 @WebService
 public interface CMUServeur {
-	// Dossier Médical
-	@WebMethod(operationName = "creerOuModifierDossierMedical")
-	public boolean creerOuMettreAJour(DossierMedical dossierMedical);
+    // Dossier Médical
+    @WebMethod(operationName = "creerOuMettreAJourDossierMedical")
+    public boolean creerOuMettreAJourDossierMedical(DossierMedical dossierMedical);
 
-	@WebMethod(operationName = "supprimerDossierMedical")
-	public boolean supprimerDossierMedical(Long dossierMedicalId);
+    @WebMethod(operationName = "supprimerDossierMedical")
+    public boolean supprimerDossierMedical(Long dossierMedicalId);
 
-	@WebMethod(operationName = "recupererDossierMedical")
-	public DossierMedical recupererDossierMedical(Long patientId);
+    @WebMethod(operationName = "recupererDossierMedical")
+    public DossierMedical recupererDossierMedical(Long patientId);
 
-	// Patient
-	public boolean creerOuModifierPatient(Patient patient);
-	public boolean supprimerPatient(Long patientId);
+    // Patient
+    @WebMethod(operationName = "creerOuModifierPatient")
+    public boolean creerOuModifierPatient(Patient patient);
 
+    @WebMethod(operationName = "supprimerPatient")
+    public boolean supprimerPatient(Long patientId);
 }
