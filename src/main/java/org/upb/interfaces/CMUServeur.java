@@ -2,7 +2,6 @@ package org.upb.interfaces;
 
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebService;
-import org.upb.model.Consultation;
 import org.upb.model.DossierMedical;
 import org.upb.model.Patient;
 
@@ -17,13 +16,6 @@ public interface CMUServeur {
 
 	@WebMethod(operationName = "recupererDossierMedical")
 	public DossierMedical recupererDossierMedical(Long patientId);
-
-	// Consultation
-	@WebMethod(operationName = "creerConsultation")
-	public boolean creerConsultation(Consultation consultation);
-
-	@WebMethod(operationName = "recupererConsultation")
-	public Consultation recupererConsultation(Long consultationId);
 
 	// Patient
 	public boolean creerOuModifierPatient(Patient patient);
